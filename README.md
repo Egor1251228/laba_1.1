@@ -10,3 +10,5 @@ Ubuntu: sudo virsh start lab-vm
 
 схема:
 (хостовая ОС) Windows 11 > WSL 2 (Ubuntu)  > KVM > ВМ: Ubuntu Server > Docker > контейнеры приложения 
+
+проверяем связь контейнеров командой: docker compose logs backend или docker compose logs -f backend чтоб видеть запросы в реальном времени 
