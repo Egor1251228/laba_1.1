@@ -6,16 +6,15 @@
 </head>
 <body>
     <h1>Тестирование Фронтенда и Бэкенда</h1>
-    <!-- Сюда с помощью JavaScript мы вставим ответ от бэкенда -->
+ 
     <p>Ответ от сервера: <strong id="result">Загрузка...</strong></p>
 
     <script>
-        // JS скрипт делает запрос к нашему бэкенду. 
-        // Важно: порт 5000 - это порт, который мы откроем наружу!
+  
         fetch('http://localhost:5000/api/data')
             .then(response => response.json())
             .then(data => {
-                // Берем полученный текст и вставляем его в элемент с id="result"
+            
                 document.getElementById('result').innerText = data.message;
             })
             .catch(error => {
